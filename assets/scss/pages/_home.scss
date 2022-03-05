@@ -1,0 +1,70 @@
+@use '../abstract/mixins' as mixins;
+
+.hero-area{
+    display: flex;
+    padding: 6rem 11rem;
+    justify-content: space-around;
+    align-items: center;
+
+    @include mixins.responsive(xs){
+        padding: 6rem 2rem;
+        flex-direction: column;
+    }
+    @include mixins.responsive(sm){
+        padding: 4rem 2rem;
+        flex-direction: column;
+        img{
+            width: 25rem;
+        }
+    }
+    @include mixins.responsive(md){
+        padding: 10rem 7rem;
+    }
+    @include mixins.responsive(lg){
+        padding: 8rem 11rem;
+        flex-direction: row;
+    }
+
+    @include mixins.responsive(xlg){
+        padding: 8rem 15rem;
+    }
+
+    @include mixins.responsive(xxlg){
+        padding: 8rem 20rem;
+        img{
+            width: 35rem;
+        }
+    }
+
+    &--content{
+        font-size: 0.5rem;
+        max-width: 34rem;
+
+    }
+
+    &--title{  
+        font-size: 1.2rem;
+        padding: 1px;
+        line-height: 35px;
+        font-weight: bold;
+        @include mixins.responsive(xs){
+            font-size: 1rem;
+        }
+        @include mixins.responsive(xxlg){
+            font-size: 1.8rem;
+            line-height: 5rem;
+        }
+    }
+
+    &--desc{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        line-height: 1.8;
+        @include mixins.responsive(xs){
+            font-size: 0.8rem;
+        }
+        @include mixins.responsive(xxlg){
+            font-size: 1.3rem;
+        }
+    }
+}

@@ -1,0 +1,158 @@
+@use '../abstract/mixins' as mixins;
+
+.background-shaps{
+    @include mixins.responsive(xs){
+        display: none;
+    }
+    .box1{
+        position: absolute;
+        top: 20%;
+        width: 10px;
+        left: 60px;
+        height: 10px;
+        background-color: transparent;
+        border: 3px solid #3f43fd;
+        border-radius: 0.35rem;
+        z-index: -1;
+        transform: rotate(360deg);
+
+        animation: box-shape linear 5s infinite;
+    }
+    .box2{
+        position: absolute;
+        top: 85%;
+        width: 10px;
+        left: 60%;
+        height: 10px;
+        background-color: transparent;
+        border: 3px solid #3f43fd;
+        border-radius: 0.35rem;
+        z-index: -1;
+        transform: rotate(360deg);
+
+        animation: box-shape linear 5s infinite;
+    }
+    .box3{
+        position: absolute;
+        top: 50%;
+        width: 10px;
+        left: 90%;
+        height: 10px;
+        background-color: transparent;
+        border: 3px solid #3f43fd;
+        border-radius: 0.35rem;
+        z-index: -1;
+        transform: rotate(360deg);
+
+        animation: box-shape linear 5s infinite;
+    }
+    .dot1{
+        position: absolute;
+        top: 77%;
+        width: 5px;
+        left: 6%;
+        height: 5px;
+        background-color: transparent;
+        // border: 3px solid #3f43fd;
+        background-color: #3f43fd;
+        border-radius: 50%;
+        z-index: -1;
+        transform: rotate(360deg);
+
+        animation: box-shape linear 5s infinite;
+    }
+    .dot2{
+        position: absolute;
+        top: 18%;
+        right: 4%;
+        width: 5px;
+        height: 5px;
+        background-color: #f428fa;
+        // border: 3px solid #f428fa;
+        border-radius: 50%;
+        z-index: -1;
+        transform: rotate(360deg);
+
+        animation: box-shape linear 5s infinite;
+    }
+    .dot3{
+        position: absolute;
+        top: 90%;
+        left: 43%;
+        width: 5px;
+        height: 5px;
+        background-color: #f51533;
+        // border: 3px solid #f428fa;
+        border-radius: 50%;
+        z-index: -1;
+        transform: rotate(360deg);
+
+        animation: box-shape linear 5s infinite;
+    }
+
+    .dot4{
+        position: absolute;
+        top: 91%;
+        right: 5%;
+        width: 5px;
+        height: 5px;
+        background-color: #1537f5;
+        // border: 3px solid #f428fa;
+        border-radius: 50%;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+        
+    }
+
+    .heart1{
+        position: absolute;
+        font-size: 0.6rem;
+        top: 85%;
+        left: 31%;
+        z-index: -1;
+        color: rgb(250, 11, 11);
+        // border: 2px solid red;
+        animation: box-shape linear 5s infinite;
+    }
+    .heart2{
+        position: absolute;
+        font-size: 0.6rem;
+        top: 55%;
+        right: 8%;
+        z-index: -1;
+        color: rgb(250, 11, 11);
+        animation: box-shape linear 5s infinite;
+    }
+
+    .circle1{
+        position: absolute;
+        top: 80%;
+        width: 10px;
+        left: 21%;
+        height: 10px;
+        background-color: transparent;
+        border: 3px solid #f80338;
+        border-radius: 0.35rem; 
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+    .circle2{
+        position: absolute;
+        top: 24%;
+        width: 10px;
+        right: 5%;
+        height: 10px;
+        background-color: transparent;
+        border: 3px solid #f80338;
+        border-radius: 0.35rem; 
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+
+
+   
+}
+

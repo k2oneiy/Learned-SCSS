@@ -1,0 +1,14 @@
+@use '../abstract/functions' as func;
+
+
+.badge{
+    padding: 2px 10px;
+
+    &-primary{
+        @extend .badge;
+        background-color: func.theme-colors() ;
+        color: white;
+        border-radius: 5px;
+
+    }
+}

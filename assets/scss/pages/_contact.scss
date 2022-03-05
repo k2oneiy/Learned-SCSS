@@ -1,0 +1,53 @@
+@use '../abstract/mixins' as mixins;
+
+.contact{
+    padding: 6rem 10rem;
+    background-color: rgb(213, 214, 216);
+    @include mixins.responsive(xs){
+        padding: 3rem 1.5rem;
+    }
+    @include mixins.responsive(sm){
+        padding: 3rem 1.5rem;
+    }
+    @include mixins.responsive(lg){
+        padding: 3rem 1.5rem;
+    }
+    @include mixins.responsive(lg){
+        padding: 5rem 3rem;
+    }
+    &-card{
+        h4{
+            font-size: 13px;
+        }
+        p{
+            font-size: 10px;
+        }
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+        border-radius: 0.3rem;
+        @include mixins.responsive(xs){
+            flex-direction: column;
+        }
+        @include mixins.responsive(sm){
+            flex-direction: column;
+        }
+        @include mixins.responsive(sm){
+            flex-direction: row;
+        }
+        &-img{
+            @include mixins.responsive(xs){
+                width: 100%;
+            }
+            @include mixins.responsive(sm){
+                width: 100%;
+            }
+            width: 350px;
+        }
+        &--contents{
+            flex-grow: 1;
+        }
+    }
+}

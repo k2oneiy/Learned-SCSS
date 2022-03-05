@@ -1,0 +1,28 @@
+.color-anim{
+    transform: 500ms;
+    animation: color-change 10s infinite;
+
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.line{
+    width: 3.5rem;
+    height: 0.3rem;
+    border-radius: 5px;
+    margin: 25px auto;
+    background: linear-gradient(to right,#e24997,#2d2ed4);
+}
+
+
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.hidden{
+    display: none;
+} 

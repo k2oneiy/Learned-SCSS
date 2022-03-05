@@ -1,0 +1,128 @@
+@use "../abstract/variables" as var;
+@use "../abstract/functions" as func;
+@use "../abstract/mixins" as mixins;
+
+
+.roadmap{
+    // background-color: blue;
+    padding: 4rem 12rem;
+    font-size: 12px;
+    @include mixins.responsive(xs){
+        padding: 4rem 2rem;
+    }
+    @include mixins.responsive(sm){
+        padding: 4rem 2rem;
+    }
+    @include mixins.responsive(lg){
+        padding: 4rem 2rem;
+    }
+    &--heading{
+        text-align: center;
+    }
+    &--items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        @include mixins.responsive(xs){
+            padding: 4rem 2rem;
+            flex-direction: column;
+        }
+        @include mixins.responsive(sm){
+            padding: 4rem 2rem;
+            flex-direction: column;
+        }
+        @include mixins.responsive(lg){
+            padding: 4rem 2rem;
+            flex-direction: row;
+        }
+    }
+    &--item{
+        transition: 500ms;
+        padding: 2rem;
+        text-align: center;
+        font-size: 12px;
+        max-width: 250px;
+        position: relative;
+        filter: grayscale(100%);
+      
+        &:hover &--image::after{
+            animation: rotate-infinite 4000ms linear infinite;
+        }
+        &--image{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 6px;
+            img{
+                width: 2rem;
+                margin-top: 20px;
+                margin-right: 0px;
+            }
+            &::after{
+                position: absolute;
+                top: 0;
+                left: -5px;
+                width: 60%;
+                height: 60%;
+                content: "";
+                border: 4px dotted func.theme-colors();
+                border-radius: 70%;
+                margin-left: 22px;
+
+            }
+            
+        }
+        &--contents{
+            margin-top: 0.7rem;
+            h5{
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+            p{
+                color: gray;
+                line-height: 1.5;
+            }
+        }
+
+        &:hover:not(:last-child)::before{
+            color: func.theme-colors();
+            right: -22%;
+        }
+        &:not(:last-child):before{
+            position: absolute;
+            cursor: pointer;
+            top: 20%;
+            right: -10px;
+            width: 120px;
+            height: 120px;
+            content: "";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            font-size: 1.5rem;
+            z-index: 1;
+            @include mixins.responsive(xs){
+                content: "\f107";
+                top: 90%;
+                left: 25%;
+            }
+            @include mixins.responsive(sm){
+                content: "\f107";
+                top: 90%;
+                left: 25%;
+            }
+            @include mixins.responsive(lg){
+                content: "\f107";
+                top: 30%;
+                left: 75%;
+            }
+
+        }
+        &:hover{
+            color: func.theme-colors();
+        }
+        &:hover{
+            filter: grayscale(0);
+        }
+    }
+}

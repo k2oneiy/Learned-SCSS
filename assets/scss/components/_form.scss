@@ -1,0 +1,30 @@
+@use '../abstract/functions' as func;
+@use '../abstract/mixins';
+
+.form-control{
+    width: 300px;
+    @include mixins.responsive(xs){
+        width: 130%;
+    }
+    padding: 0.5rem 1rem;
+    background-color: rgb(228, 233, 238);
+    border: none;
+    font-size: 10px;
+    border-radius: 5px;
+    outline: none;
+    &:focus{
+        border: 1px solid func.theme-colors();
+    }
+}
+
+.resize-x {
+    resize: horizontal;
+}
+  
+.resize-y {
+    resize: vertical;
+}
+  
+.resize-none {
+    resize: none;
+}

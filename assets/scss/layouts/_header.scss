@@ -1,0 +1,107 @@
+@use '../abstract/variables' as var;
+@use '../abstract/functions' as fun;
+@use '../abstract/mixins' as mixins;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+    align-items: center;
+    text-transform:capitalize;
+    .nav-toggle{
+        display: none;
+    }
+    @include mixins.responsive(xs){
+        padding: 1rem 2rem;
+        .nav-toggle{
+            display:flex;
+            margin-left: 70px;
+        }
+        h2{
+            font-size: 14px;
+        }
+    }
+    @include mixins.responsive(sm){
+        padding: 1rem 3rem;
+        .nav-toggle{
+            display:flex;
+            margin-left: 300px;
+        }
+    }
+    @include mixins.responsive(md){
+        padding: 1rem 7rem;
+        .nav-toggle{
+            display:flex;
+            margin-left: 300px;
+        }
+    }
+    @include mixins.responsive(lg){
+        padding: 1rem 10rem;
+    }
+    @include mixins.responsive(lg){
+        .nav-toggle{
+            display: none;
+        }
+    }
+    @include mixins.responsive(xlg){
+        padding: 1rem 15rem;
+    }
+    @include mixins.responsive(xxlg){
+        padding: 1rem 25rem;
+    }
+    &-menu{
+        display: flex;
+        list-style: none;
+        @include mixins.responsive(xs){
+            display: none;
+
+            position: fixed;
+            left: 0;
+            top: -100%;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(43, 43, 250);
+            z-index: 1;
+            &.show{
+                display: block;
+                top: 78px;
+            }
+            & li {
+                padding: 2rem;
+                text-align: center;
+                a{
+                    color: #fff;
+                    &.active{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        @include mixins.responsive(sm){
+            display: none;
+        }
+        @include mixins.responsive(lg){
+            display: flex;
+        }
+        &-item>a{
+            margin-right: 1.5rem;
+            font-size: 12px;
+            text-align: center;
+            font-weight: 700;
+            color: #242424;
+            &:hover{
+                color: fun.theme-colors('primary');
+            }
+            &.active{
+                color: fun.theme-colors('primary');
+            }
+        }
+    }
+    &.navbar-fixed{
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        z-index: 10;
+    }
+}
+

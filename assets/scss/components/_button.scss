@@ -1,0 +1,32 @@
+@use '../abstract/variables' as var;
+@use '../abstract/functions' as fun;
+
+.btn{
+    padding: 0.4rem 1.0rem;
+    border-radius: 6px;
+    line-height: 1.5;
+    font-size: 0.6rem;
+    font-weight: 550;
+    border: none;
+    outline: none;
+    &-primary{
+        @extend .btn;
+        background-color: fun.theme-colors('primary');
+        color: #fff;
+    }
+    &:hover{
+        background-color: fun.theme-colors('primary-hover');
+    }
+    &-primary-outlined{
+        @extend .btn;
+        background-color: #fff;
+        border: 2px solid fun.theme-colors();
+        color: fun.theme-colors();
+        &:hover{
+            background-color: fun.theme-colors();
+            color: #fff;
+        }
+    }
+
+}
+
